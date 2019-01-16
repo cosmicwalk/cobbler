@@ -6,6 +6,7 @@
    postrotate
       /sbin/service cobblerd condrestart > /dev/null 2>&1
    endscript
+   su root apache
 }
 
 /var/log/cobbler/tasks/*.log {
@@ -16,6 +17,7 @@
    nocompress
    nocreate
    nomail
+   su root apache
 }
 
 /var/log/cobbler/install.log {
@@ -23,4 +25,5 @@
    notifempty
    rotate 4
    weekly
+   su root apache
 }
