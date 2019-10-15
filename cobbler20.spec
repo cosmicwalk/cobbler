@@ -22,7 +22,7 @@ Name: cobbler20
 License: GPLv2+
 AutoReq: no
 Version: 2.0.11
-Release: 92%{?dist}
+Release: 93%{?dist}
 Source0: %{name}-%{version}.tar.gz
 Group: Applications/System
 
@@ -469,6 +469,10 @@ Web interface for Cobbler that allows visiting http://server/cobbler_web to conf
 %doc AUTHORS COPYING CHANGELOG README
 
 %changelog
+* Tue Oct 15 2019 Michael Mraka <michael.mraka@redhat.com> 2.0.11-93
+- Backport of cobbler bug 1201879 (Support CentOS 7)
+- Logrotate file missing su directive
+
 * Thu Jul 11 2019 Michael Mraka <michael.mraka@redhat.com> 2.0.11-92
 - 1719189 - shlex.split() on RHEL6 can't handle unicode
 
